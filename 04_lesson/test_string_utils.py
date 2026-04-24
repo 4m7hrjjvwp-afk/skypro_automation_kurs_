@@ -76,3 +76,4 @@ def test_delete_symbol_positive(input_str, symbol, expected):
 ])
 def test_delete_symbol_negative(input_str, symbol, expected):
     assert string_utils.delete_symbol(input_str, symbol), expected
+
