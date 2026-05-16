@@ -1,8 +1,8 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
-@pytest.fixture
+
 def test_shop():
     driver = webdriver.Firefox()
     driver.get("https://www.saucedemo.com/")
@@ -28,7 +28,9 @@ def test_shop():
 
     driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]')
 
-    total = driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]')
+    total = driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]').text
+    WebDriverWait(driver, 15)
+    assert total == "$58,29"
 
     print(total)
 
