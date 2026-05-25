@@ -6,8 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 class CalculatorPage:
     def __init__(self, driver):
         self.driver = driver
-        self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
-        self.driver.maximize_window()
 
     def input_delay(self, value):
         input_delay = self.driver.find_element(By.CSS_SELECTOR, "#delay")
@@ -24,4 +22,4 @@ class CalculatorPage:
         waiter = WebDriverWait(self.driver, 55)
         waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15"))
         result = self.driver.find_element(By.CSS_SELECTOR, ".screen").text
-        return result.text
+        return result

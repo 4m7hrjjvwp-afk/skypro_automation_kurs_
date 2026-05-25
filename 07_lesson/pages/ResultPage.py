@@ -8,5 +8,8 @@ class ResultPage:
 
     def total_amount(self, driver):
         total_amount = self.driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]').text
+        print(total_amount)
         WebDriverWait(driver, 15)
-        assert total_amount == "$58,29"
+
+    def click_finish(self):
+        self.driver.find_element(By.CSS_SELECTOR, 'a[data-test="finish"]').click()

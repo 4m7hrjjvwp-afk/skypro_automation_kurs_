@@ -12,7 +12,3 @@ class MainPage:
         t_shirt.click()
         onesie = self.driver.find_element(By.CSS_SELECTOR, "#add-to-cart-sauce-labs-onesie")
         onesie.click()
-
-    def checkout(self):
-        self.driver.find_element(By.CSS_SELECTOR, 'a[data-test="shopping-cart-link"]').click()
-        self.driver.find_element(By.CSS_SELECTOR, "#checkout").click()
