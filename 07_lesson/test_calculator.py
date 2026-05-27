@@ -7,7 +7,8 @@ from pages.CalculatorPage import CalculatorPage
 def test_calculator():
     chrome_service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=chrome_service)
-    driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
+    driver.get(
+        "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
     driver.maximize_window()
     calculator = CalculatorPage(driver)
     calculator.input_delay("45")

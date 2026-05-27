@@ -22,6 +22,7 @@ def test_shop():
     checkout_page.fill_form()
     checkout_page.click_continue()
     result_page = ResultPage(driver)
-    result_page.total_amount()
+    total = result_page.get_total()
+    assert total == "$58.29"
     result_page.click_finish()
     driver.quit()

@@ -6,7 +6,7 @@ class CartPage:
         self.driver = driver
 
     def checkout(self):
-        self.driver.find_element(By.CSS_SELECTOR, 'a[data-test="shopping-cart-link"]').click()
-        self.driver.find_element(By.CSS_SELECTOR, "#checkout").click()
-
-
+        self.driver.find_element(
+            By.CSS_SELECTOR, 'a[data-test="shopping-cart-link"]').click()
+        self.driver.find_element(
+            By.CSS_SELECTOR, "#checkout").click()
