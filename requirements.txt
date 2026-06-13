@@ -1,3 +1,5 @@
+dotenv
+sqlalchemy
 requests
 pages
 pytest==8.3.5
